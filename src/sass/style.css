@@ -1,0 +1,225 @@
+body {
+  background-image: url(.././components/background2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #6699;
+  color: #00ccff;
+  text-align: center;
+}
+
+.input {
+  display: -ms-grid;
+  display: grid;
+  margin: auto;
+  -ms-grid-columns: 1fr 0.5fr;
+      grid-template-columns: 1fr 0.5fr;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 10px;
+  height: 4vh;
+}
+
+input {
+  background-color: #ffc600;
+  border: 2px solid #ffc600;
+  border-radius: 3px;
+  outline: none;
+  padding: 0.3em;
+  color: #e900ff;
+}
+
+input:focus {
+  -webkit-animation: border 2.5s linear infinite;
+          animation: border 2.5s linear infinite;
+}
+
+button {
+  background-color: #ffc600;
+  border: none;
+  border-radius: 3px;
+  color: #e900ff;
+}
+
+button:hover {
+  cursor: pointer;
+  -webkit-animation: hover 2.5s linear infinite;
+          animation: hover 2.5s linear infinite;
+}
+
+@-webkit-keyframes hover {
+  0% {
+    background-color: #ffc600;
+  }
+  33% {
+    background-color: #00ccff;
+  }
+  66% {
+    background-color: #5800ff;
+  }
+  100% {
+    background-color: #ffc600;
+  }
+}
+
+@keyframes hover {
+  0% {
+    background-color: #ffc600;
+  }
+  33% {
+    background-color: #00ccff;
+  }
+  66% {
+    background-color: #5800ff;
+  }
+  100% {
+    background-color: #ffc600;
+  }
+}
+
+@-webkit-keyframes border {
+  0% {
+    border: 2px solid #ffc600;
+  }
+  33% {
+    border: 2px solid #00ccff;
+  }
+  66% {
+    border: 2px solid #5800ff;
+  }
+  100% {
+    border: 2px solid #ffc600;
+  }
+}
+
+@keyframes border {
+  0% {
+    border: 2px solid #ffc600;
+  }
+  33% {
+    border: 2px solid #00ccff;
+  }
+  66% {
+    border: 2px solid #5800ff;
+  }
+  100% {
+    border: 2px solid #ffc600;
+  }
+}
+
+.footer {
+  color: #ffc600;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 10px;
+}
+
+.footer .footer__container {
+  border: 2px solid #00ccff;
+  border-radius: 3px;
+  padding: 5px;
+  -webkit-box-shadow: 0px -1px 23px 2px rgba(0, 204, 255, 0.43);
+          box-shadow: 0px -1px 23px 2px rgba(0, 204, 255, 0.43);
+  -webkit-animation: shadow 2.5s ease-in-out infinite;
+          animation: shadow 2.5s ease-in-out infinite;
+  max-width: 360px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.footer .footer__container img {
+  width: 50px;
+  height: auto;
+}
+
+@-webkit-keyframes shadow {
+  0% {
+    -webkit-box-shadow: 0px -1px 23px 2px rgba(0, 204, 255, 0.43);
+            box-shadow: 0px -1px 23px 2px rgba(0, 204, 255, 0.43);
+  }
+  50% {
+    -webkit-box-shadow: 0px -1px 47px 25px rgba(0, 204, 255, 0.5);
+            box-shadow: 0px -1px 47px 25px rgba(0, 204, 255, 0.5);
+  }
+  100% {
+    -webkit-box-shadow: 0px -1px 23px 2px rgba(0, 204, 255, 0.43);
+            box-shadow: 0px -1px 23px 2px rgba(0, 204, 255, 0.43);
+  }
+}
+
+@keyframes shadow {
+  0% {
+    -webkit-box-shadow: 0px -1px 23px 2px rgba(0, 204, 255, 0.43);
+            box-shadow: 0px -1px 23px 2px rgba(0, 204, 255, 0.43);
+  }
+  50% {
+    -webkit-box-shadow: 0px -1px 47px 25px rgba(0, 204, 255, 0.5);
+            box-shadow: 0px -1px 47px 25px rgba(0, 204, 255, 0.5);
+  }
+  100% {
+    -webkit-box-shadow: 0px -1px 23px 2px rgba(0, 204, 255, 0.43);
+            box-shadow: 0px -1px 23px 2px rgba(0, 204, 255, 0.43);
+  }
+}
+
+img {
+  width: 80%;
+  height: auto;
+  max-width: 330px;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    font-size: 30px;
+  }
+  .footer .footer__container {
+    background-color: #00000086;
+    width: 100%;
+  }
+  .footer .footer__container img {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .hero {
+    font-size: 30px;
+  }
+  input {
+    font-size: large;
+    width: 20vw;
+    height: 3vh;
+  }
+  button {
+    font-size: 16px;
+    width: 8vw;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .hero {
+    font-size: 40px;
+  }
+  input {
+    font-size: larger;
+  }
+  button {
+    font-size: larger;
+  }
+  img {
+    max-width: 500px;
+  }
+  .footer {
+    font-size: 50px;
+  }
+  .footer .footer__container {
+    max-width: 500px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,165 @@
+$black: #000000;
+$purple: #5800ff;
+$pink: #e900ff;
+$yellow: #ffc600;
+
+body {
+  background-image: url(.././components/background2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #6699;
+  color: #00ccff;
+  text-align: center;
+}
+
+.input {
+  display: grid;
+  margin: auto;
+  grid-template-columns: 1fr 0.5fr;
+  width: fit-content;
+  gap: 10px;
+  height: 4vh;
+}
+input {
+  background-color: $yellow;
+  border: 2px solid $yellow;
+  border-radius: 3px;
+  outline: none;
+  padding: 0.3em;
+  color: $pink;
+}
+input:focus {
+  animation: border 2.5s linear infinite;
+}
+button {
+  background-color: $yellow;
+  border: none;
+  border-radius: 3px;
+  color: $pink;
+}
+button:hover {
+  cursor: pointer;
+  animation: hover 2.5s linear infinite;
+}
+
+@keyframes hover {
+  0% {
+    background-color: $yellow;
+  }
+  33% {
+    background-color: #00ccff;
+  }
+  66% {
+    background-color: $purple;
+  }
+  100% {
+    background-color: $yellow;
+  }
+}
+
+@keyframes border {
+  0% {
+    border: 2px solid $yellow;
+  }
+  33% {
+    border: 2px solid #00ccff;
+  }
+  66% {
+    border: 2px solid $purple;
+  }
+  100% {
+    border: 2px solid $yellow;
+  }
+}
+
+.footer {
+  color: $yellow;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 10px;
+  .footer__container {
+    border: 2px solid #00ccff;
+    border-radius: 3px;
+    padding: 5px;
+    box-shadow: 0px -1px 23px 2px rgba(0, 204, 255, 0.43);
+    animation: shadow 2.5s ease-in-out infinite;
+
+    max-width: 360px;
+    justify-self: center;
+    img {
+      width: 50px;
+      height: auto;
+    }
+  }
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: 0px -1px 23px 2px rgba(0, 204, 255, 0.43);
+  }
+  50% {
+    box-shadow: 0px -1px 47px 25px rgba(0, 204, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0px -1px 23px 2px rgba(0, 204, 255, 0.43);
+  }
+}
+
+img {
+  width: 80%;
+  height: auto;
+  max-width: 330px;
+}
+
+@media screen and(min-width:1024px) {
+  .footer {
+    font-size: 30px;
+    .footer__container {
+      background-color: #00000086;
+      width: 100%;
+      img {
+        width: 100px;
+      }
+    }
+  }
+}
+
+@media screen and(min-width:1400px) {
+  .hero {
+    font-size: 30px;
+  }
+  input {
+    font-size: large;
+    width: 20vw;
+    height: 3vh;
+  }
+  button {
+    font-size: 16px;
+    width: 8vw;
+  }
+}
+
+@media screen and(min-width:1600px) {
+  .hero {
+    font-size: 40px;
+  }
+  input {
+    font-size: larger;
+  }
+  button {
+    font-size: larger;
+  }
+  img {
+    max-width: 500px;
+  }
+  .footer {
+    font-size: 50px;
+    .footer__container {
+      max-width: 500px;
+    }
+  }
+}
